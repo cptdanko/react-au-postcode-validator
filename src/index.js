@@ -27,17 +27,23 @@ class AddressForm extends React.Component {
   }
   render() {
     return (
-      <form onSubmit={this.submitHandler}>
+      <form className="form" onSubmit={this.submitHandler}>
       <h1> Hi there!!! </h1>
-      <p> Please enter the suburt, post code for the state you wish to find</p>
-      <p> Suburb </p>
-      <input type="text" name='suburb'/>
-      <p> Post code </p>
-      <input type="text" name='postcode'  />
-      <p> State </p>
-      <input type="text" name='cState'/>
-      <div> 
-        <input type="submit" value="Validate address " />
+      <p> Please enter the suburb, post code for the state you want to find</p>
+      <div className="data">
+         <p> Suburb </p>
+        <input type="text" name='suburb'/>
+      </div>
+      <div className="data">
+        <p> Post code </p>
+        <input type="text" name='postcode'  />
+      </div>
+      <div className="data">
+        <p> State </p>
+        <input type="text" name='cState'/>
+      </div>
+      <div className="center"> 
+        <input className="submit" type="submit" value="VALIDATE ADDRESS" />
       </div>
       </form>
     );
