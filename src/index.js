@@ -35,25 +35,21 @@ class AddressForm extends React.Component {
       this.stateRef.current.focus();
       return;
     }
-    //make an API call and do some validation 
-    //based on responses
-    //TODO: - incomplete
-    const API_KEY = "872608e3-4530-4c6a-a369-052accb03ca8";
-    const BASE_PO_URL="https://digitalapi.auspost.com.au/postcode/";
-    let targetUrl = BASE_PO_URL + `search?q=${suburb}&state=${cState}`;
-      
-    fetch(targetUrl, { 
-      method: 'post', 
-      headers: new Headers({
-       'AUTH-KEY': API_KEY,
-     }), 
-    });
+    let endpoint = `http://localhost:9999/api?q=${suburb}&state=${cState}`;
+    
+    fetch(endpoint).then(data => {
+      data.json().then(resolved => {
+        console.log(resolved.localities);
+        console.log(resolved.localities.locality);
+        console.log(resolved);
+      });
+     })
   }
   render() {
     return (
       <form className="form" onSubmit={this.submitHandler}>
       <h1> Hi there!!! </h1>
-      <p> Please enter the suburb, post code for the state you want to find</p>
+      <p> Please fill in the form below...</p>
       <div className="data">
          <p> Suburb </p>
         <input type="text" 
@@ -72,7 +68,7 @@ class AddressForm extends React.Component {
         name='cState'
         ref={this.stateRef}  />
       </div>
-      <div className="center"> 
+      <div> 
         <input className="submit" type="submit" value="VALIDATE ADDRESS" />
       </div>
       </form>

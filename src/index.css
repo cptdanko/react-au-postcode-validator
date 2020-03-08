@@ -6,9 +6,14 @@ body {
 .form {
   display: flex;
   flex-direction: column;
+  margin: auto;
   flex-wrap: wrap;
   padding: 5px;
   font-family: monospace;
+  background-color: lightgray;
+  width: 50%;
+  text-align: center;
+  border-radius: 20px;
 }
 
 .data {
@@ -22,7 +27,7 @@ body {
   background-color: blue;
   margin-top: 5px;
   border-radius: 5px;
-  box-shadow: 5px 10px;
+  
   text-align: center;
   padding: 15px;
   font-size: 18px;
