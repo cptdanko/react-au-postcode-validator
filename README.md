@@ -28,7 +28,8 @@ Open 2 terminal tabs, 1. -> for npm start and 2. -> for node corsProxy
 
 ## TODO
 There are still test cases that require the code to be fixed
-- Doesn't gracefully handle multiple data points returned by AuPost API. 
-- Doesn't match suburb and state properly e.g. 2032, Kingsford and WA shows the error 'The postcode doesn't match suburb' Wrong Error message and needs fixing!!!!!
+- the code for fetching & processing data and matching suburbs looks confusing
+- too much code in one page, modularise it? maybe use the Angular directives equivalent for react
+- using standard 'alert' dialogs, maybe use a better css styled proper dialog box
 
 This was the first time, I built anything in React, so be gentle and Happy hacking :)
