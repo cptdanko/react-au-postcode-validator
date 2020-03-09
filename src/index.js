@@ -18,6 +18,7 @@ class AddressForm extends React.Component {
     this.postCodeRef = React.createRef();
     this.suburbRef = React.createRef();
     this.stateRef = React.createRef();
+    //NT is not a state, yes but going to leave it here in either case
     this.validSateData = [
       {abbrv: "NSW", name: "New South Wales"},
       {abbrv: "WA", name: "Western Australia"},
@@ -30,10 +31,6 @@ class AddressForm extends React.Component {
   }
   validateObject = (pobox, cState, suburb, apiObj) => {
     //debugger
-    /*what are the cases
-    state and postcode match and suburb doesn't?
-    state and suburb match but postcode doesn't?
-    */
     if(apiObj.location.toLowerCase() === suburb
         && apiObj.postcode === pobox
         && apiObj.state.toLowerCase() === cState) {
@@ -84,7 +81,7 @@ class AddressForm extends React.Component {
     let endpoint = `http://localhost:9999/api?q=${suburb}&state=${cState}`;
     //this entire solution is bad and borders on unreadable
     //could be improved with time
-    debugger
+    //debugger
     fetch(endpoint).then(data => {
       data.json().then(resolved => {
         if(resolved) {
@@ -99,7 +96,7 @@ class AddressForm extends React.Component {
                   resultCheck = this.validateObject(postcode, cState, suburb, localityObjs[i]);
                   if(resultCheck === this.API_CHECK_RESULT_ENUM.ALL_MATCHES) {
                     //a really really bad way to break out of a loop
-                    //written here due to lack of time (target: 4hrs max) 
+                    //written here due to lack of time
                     //and unfamalarity with AU_POST API
                     //may as well write 'goto' statements
                     i = localityObjs.length - 1;

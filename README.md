@@ -27,6 +27,7 @@ Open 2 terminal tabs, 1. -> for npm start and 2. -> for node corsProxy
 [resolve npm watchers error]: https://github.com/guard/listen/wiki/Increasing-the-amount-of-inotify-watchers#the-technical-details
 
 ## TODO
+- important!!! What if there's no internet connection? we don't handle that situation gracefully here
 - the code for fetching, processing data and matching suburbs looks confusing, clean up
 - too much code in one page, modularise it? maybe use the Angular services equivalent for react
 - using standard 'alert' dialogs, maybe use a better css styled proper dialog box
