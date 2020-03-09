@@ -1,68 +1,26 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+# Australian postcode validator in react
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). It was edited on 3 separate machines running Windows 10, MacOS and Ubuntu 18.04 (depending on which machine I am working on during the day).
 
-In the project directory, you can run:
+p.s. on Ubuntu, you may encounter an error with respect to 'watchers' when executing npm start. Have a look at this link to [resolve npm watchers error]
 
-### `npm start`
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Instructions
+- clone the Github repo on the command line 
+- run 'npm install'
+- run 'node corsProxy'
+- run 'npm start'
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+# Reference material 
+* [Intro to React] - To learn some React concepts
+* [Ajax and APIs] - To know more about using fetch
+* [CORS Error 1] - A github repo on building proxy to avoid CORS
+* [CORS Error 2] - Another github repo on avoiding CORS
 
-### `npm test`
+[Intro to React]:  https://reactjs.org/tutorial/tutorial.html
+[Ajax and APIs]: https://reactjs.org/docs/faq-ajax.html
+[CORS Error 1]: https://github.com/ccoenraets/cors-proxy/blob/master/server.js
+[CORS Error 2]: https://github.com/jonathansee2013/Postcode-Validator
+[resolve npm watchers error]: https://github.com/guard/listen/wiki/Increasing-the-amount-of-inotify-watchers#the-technical-details
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+This was the first time, I built anything in React, so be gentle and Happy hacking :)
