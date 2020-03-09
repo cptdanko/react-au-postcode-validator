@@ -14,8 +14,18 @@ class AddressForm extends React.Component {
     this.postCodeRef = React.createRef();
     this.suburbRef = React.createRef();
     this.stateRef = React.createRef();
+    this.validSateData = [
+      {abbrv: "NSW", name: "New South Wales"},
+      {abbrv: "WA", name: "Western Australia"},
+      {abbrv: "SA", name: "South Australia"},
+      {abbrv: "NT", name: "Northen Territory"},
+      {abbrv: "VIC", name: "Victoria"},
+      {abbrv: "QLD", name: "Queensland"},
+      {abbrv: "TAS", name: "Tasmania"},
+    ]
   }
   validateObject = (pobox, cState, suburb, apiObj) => {
+    //debugger
     if(apiObj.location.toLowerCase() === suburb
         && apiObj.postcode === pobox
         && apiObj.state.toLowerCase() === cState) {
@@ -50,24 +60,37 @@ class AddressForm extends React.Component {
       this.stateRef.current.focus();
       return;
     }
+    //debugger
+    let validState = this.validSateData.find(vData => 
+      vData.abbrv.toLowerCase() == cState.toLowerCase() 
+      || vData.name.toLowerCase() == cState.toLowerCase()
+    );
+    //are we sure, the AustraliPost API will always return the state abbreviation?
+    cState = validState.abbrv.toLowerCase();
     let endpoint = `http://localhost:9999/api?q=${suburb}&state=${cState}`;
     fetch(endpoint).then(data => {
       data.json().then(resolved => {
         if(resolved) {
           if(resolved.localities.locality) {
             let localityObjs = resolved.localities.locality;
-            debugger
+            //debugger
             if(Array.isArray(localityObjs)) {
               for(let i=0; i < localityObjs.length; i++) {
+                //TODO: fix this, the code doesn't handle
+                //dealing with an array
                 this.validateObject(postcode, cState, suburb, localityObjs[i]);
               }
-            } else {
-              console.log("response is object");
+            } else { //this is probably wrong? we are assuming it's an object
               this.validateObject(postcode, cState, suburb, localityObjs);
             }
           }
+        } else {
+          alert("Error fetching data");
         }
       }).catch(err => {
+        /*this doesn't work? we are not doing proper error checking
+        to determine when a network call fails
+        */
         console.log(err);
       });
      })

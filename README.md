@@ -8,8 +8,11 @@ p.s. on Ubuntu, you may encounter an error with respect to 'watchers' when execu
 ### Instructions
 - clone the Github repo on the command line 
 - run 'npm install'
-- run 'node corsProxy'
-- run 'npm start'
+- run 'node corsProxy' (in a new terminal tab)
+- run 'npm start' (in the original tab)
+
+###Summary
+Open 2 terminal tabs, 1. -> for npm start and 2. -> for node corsProxy
 
 # Reference material 
 * [Intro to React] - To learn some React concepts
@@ -22,5 +25,10 @@ p.s. on Ubuntu, you may encounter an error with respect to 'watchers' when execu
 [CORS Error 1]: https://github.com/ccoenraets/cors-proxy/blob/master/server.js
 [CORS Error 2]: https://github.com/jonathansee2013/Postcode-Validator
 [resolve npm watchers error]: https://github.com/guard/listen/wiki/Increasing-the-amount-of-inotify-watchers#the-technical-details
+
+##TODO
+There are still test cases that require the code to be fixed
+- Doesn't gracefully handle multiple data points returned by AuPost API. 
+- Doesn't match suburb and state properly e.g. 2032, Kingsford and WA shows the error 'The postcode doesn't match suburb' Wrong Error message and needs fixing!!!!!
 
 This was the first time, I built anything in React, so be gentle and Happy hacking :)

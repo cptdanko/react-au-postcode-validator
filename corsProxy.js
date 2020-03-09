@@ -18,7 +18,7 @@ app.listen(9999, '0.0.0.0');
 console.log("Listening on 0.0.0.0: 9999");
 
 app.get('/api', function(req, res) {
-    console.log(req);
+    //console.log(req);
     var config = {
         url: 'https://digitalapi.auspost.com.au/postcode/search.json?q=' + req.query.q + '&state='+ req.query.state,
         method: 'GET',
