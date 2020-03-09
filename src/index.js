@@ -120,6 +120,7 @@ class AddressForm extends React.Component {
                 alert("Something went wrong, try again later");
             }
           } else {
+            this.suburbRef.current.focus();
             alert(`Search for '${suburb}' returned no results? Are you sure you entered the right suburb?`);
           }
         } else {
