@@ -1,7 +1,6 @@
 var express = require("express");
 var http = require("http");
 var app = express();
-var appServer = require("request");
 
 var incomingRequest = require("request");
 /*taken from here
