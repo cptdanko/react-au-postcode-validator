@@ -26,6 +26,14 @@ Open 2 terminal tabs, 1. -> for npm start and 2. -> for node corsProxy
 [CORS Error 2]: https://github.com/jonathansee2013/Postcode-Validator
 [resolve npm watchers error]: https://github.com/guard/listen/wiki/Increasing-the-amount-of-inotify-watchers#the-technical-details
 
+# More great tutorials and code samples
+Checkout [this blog] for more "how-to" code samples, tutorials and just info on how to solve problems.
+
+If you like what I am doing, you can [buy me a coffee]
+
+Click on the next link for more info on the 13+ year [software engineering career journey] of the author.
+
+[buy me a coffee]: https://www.buymeacoffee.com/bhumansoni
 ## TODO
 - We don't need to have a separate proxy, we can just do it [in one line, like this]
 - important!!! What if there's no internet connection? we don't handle that situation gracefully here
