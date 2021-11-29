@@ -33,6 +33,7 @@ If you like what I am doing, you can [buy me a coffee]
 
 Click on the next link for more info on the 13+ year [software engineering career journey] of the author.
 
+[this blog]: https://mydaytodo.com/blog/
 [buy me a coffee]: https://www.buymeacoffee.com/bhumansoni
 ## TODO
 - We don't need to have a separate proxy, we can just do it [in one line, like this]
