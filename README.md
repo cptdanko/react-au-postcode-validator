@@ -35,12 +35,6 @@ Click on the next link for more info on the 13+ year [software engineering caree
 
 [this blog]: https://mydaytodo.com/blog/
 [buy me a coffee]: https://www.buymeacoffee.com/bhumansoni
-## TODO
-- We don't need to have a separate proxy, we can just do it [in one line, like this]
-- important!!! What if there's no internet connection? we don't handle that situation gracefully here
-- the code for fetching, processing data and matching suburbs looks confusing, clean up
-- too much code in one page, modularise it? maybe use the Angular services equivalent for react
-- using standard 'alert' dialogs, maybe use a better css styled proper dialog box
 
 [in one line, like this]:https://create-react-app.dev/docs/proxying-api-requests-in-development/
 
